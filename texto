@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Ler Texto em Voz Alta</title>
+</head>
+<body>
+  <!-- Caixa de texto -->
+  <textarea id="texto"></textarea>
+
+  <!-- Botão -->
+  <button onclick="lerTexto()">Ler Texto</button>
+
+  <script>
+    function lerTexto() {
+      // Obtém o valor da caixa de texto
+      var texto = document.getElementById("texto").value;
+
+      // Cria um objeto de síntese de voz
+      var falar = new SpeechSynthesisUtterance(texto);
+
+      // Faz o navegador ler em voz alta
+      window.speechSynthesis.speak(falar);
+    }
+  </script>
+</body>
+</html>
